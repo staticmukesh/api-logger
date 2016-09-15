@@ -1,0 +1,25 @@
+{
+  "name": "api-logger",
+  "version": "0.1.0",
+  "description": "Logger for api requests in Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staticmukesh/api-logger.git"
+  },
+  "keywords": [
+    "logger",
+    "winston",
+    "api-logger",
+    "api"
+  ],
+  "author": "Mukesh Sharma <sharma.mukesh439@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/staticmukesh/api-logger/issues"
+  },
+  "homepage": "https://github.com/staticmukesh/api-logger#readme"
+}
