@@ -1,6 +1,7 @@
 var winston = require('winston');
 
-var api_logger = function(options){
+var apiLogger = function(options){
+	options = options || {};
 	var logger = options.logger || new (winston.Logger)({
 	    transports: [
     	  new (winston.transports.Console)()
@@ -8,18 +9,20 @@ var api_logger = function(options){
   	});
 
 	return function (req, res, next) {
-		var req.startTime = new Date();
+		req.startTime = new Date();
 		var end = res.end;
 
-		red.end(function(chunk, encoding) {
-			var timeTaken = (new Date())- startTime;
+		res.end  = function(chunk, encoding) {
+			var timeTaken = (new Date())- req.startTime;
 
-			logger.info("%s %s %s %s", new Date().toString(), req.method, req.url, res.statusCode);
+			logger.info("%s %s %s %s", new Date().toLocaleString(), req.method, req.url, res.statusCode);
 
 			res.end = end;
 			res.end(chunk, encoding);
-		});
+		};
+
+		next();
 	}
 }
 
-module.exports = api_logger;
+module.exports = apiLogger;
