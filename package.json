@@ -1,6 +1,6 @@
 {
   "name": "api-logger",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Logger for api requests in Express",
   "main": "index.js",
   "scripts": {
