@@ -1,5 +1,7 @@
 api-logger
 =========
+[![npm version](https://badge.fury.io/js/api-logger.svg)](https://badge.fury.io/js/api-logger)
+
 This package helps you to log HTTP requests in Express Node.js application.
 
 
